@@ -1,7 +1,9 @@
 package com.example.aula.core.model.entity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import java.util.Date;
+
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,18 +17,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-
-public class Tarefas extends AbstractEntity {
+public class Alocacao extends AbstractEntity {
 	@Column 
-	private String titulo;
+	private String tituloT;
 	@Column 
-	private String descricao; 
-	@Column
-	private Date dInicio;
-	@Column
-	private Date dFim;
-	
-	
-	
-
+	private String nomeP;
 }

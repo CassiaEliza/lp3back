@@ -1,5 +1,4 @@
 package com.example.aula.controller;
-
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,16 +6,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.aula.core.model.entity.Tarefas;
+import com.example.aula.core.model.entity.Alocacao;
 
 import reactor.core.publisher.Mono;
-@RequestMapping("/tarefas")
 
-public interface TarefasController {
-	@GetMapping ("/all")
-	Mono<List<Tarefas>> getTarefas();
+@RequestMapping ("/alocacao")
+public interface AlocacaoController {
 	
-	@PostMapping ("/save")
-	Mono<Tarefas> saveTarefas(@RequestBody Tarefas tarefas);
+	@GetMapping("/all")
+	Mono<List<Alocacao>> getAlocacao();
+
+	@PostMapping("/save")
+	Mono<Alocacao> saveAlocacao(@RequestBody Alocacao alocacao);
 
 }
